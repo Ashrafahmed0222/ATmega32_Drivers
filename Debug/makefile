@@ -9,11 +9,14 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include MCAL/PORT_Driver/subdir.mk
+-include MCAL/EXTI_Driver/subdir.mk
 -include MCAL/DIO_Driver/subdir.mk
--include HAL/SW_Driver/subdir.mk
+-include HAL/SWITCH_Driver/subdir.mk
 -include HAL/SSD_Driver/subdir.mk
 -include HAL/LED_Driver/subdir.mk
+-include HAL/KEY_PAD_Driver/subdir.mk
 -include HAL/CLCD_Driver/subdir.mk
+-include HAL/BUZZER_Driver/subdir.mk
 -include APP/subdir.mk
 -include subdir.mk
 -include objects.mk

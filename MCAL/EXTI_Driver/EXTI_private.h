@@ -11,7 +11,7 @@
 *  SWC:     EXTERNAL INTERRUPT
 */
 
-#include "../DIO_Driver/DIO_interface.h"
+#include "../../LIB/STD_TYPES.h"
 
 #ifndef _EXTI_PRIVATE_H_
 #define _EXTI_PRIVATE_H_

@@ -144,6 +144,43 @@ DIO_ErrorStatus DIO_enumTogglePinValue  (u8 Copy_u8PORT, u8 Copy_u8PIN          
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+DIO_ErrorStatus DIO_enumConnectPullUp   (u8 Copy_u8PORT, u8 Copy_u8PIN, u8 Copy_u8Value ){
+	DIO_ErrorStatus LOC_enumState = DIO_OK;
+		if(Copy_u8PORT <= DIO_PORTD)
+		{
+
+
+				switch(Copy_u8PORT)
+				{
+					case DIO_PORTA: CLR_BIT(DDRA, Copy_u8PIN) ;
+									SET_BIT(PORTA, Copy_u8Value);break;
+
+
+					case DIO_PORTB: CLR_BIT(DDRA, Copy_u8PIN) ;
+									SET_BIT(PORTA, Copy_u8Value);break;
+
+
+					case DIO_PORTC: CLR_BIT(DDRA, Copy_u8PIN) ;
+									SET_BIT(PORTA, Copy_u8Value);break;
+
+
+					case DIO_PORTD: CLR_BIT(DDRA, Copy_u8PIN) ;
+									SET_BIT(PORTA, Copy_u8Value);break;
+
+
+					default :       LOC_enumState = DIO_NOK    ;break;
+				}
+
+		}
+			else
+			{
+				LOC_enumState = DIO_NOK;
+			}
+
+		return LOC_enumState;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
 DIO_ErrorStatus DIO_enumSetPortDirection (u8 Copy_u8PORT, u8 Copy_u8Direction )
 {
 	DIO_ErrorStatus LOC_enumState = DIO_OK;

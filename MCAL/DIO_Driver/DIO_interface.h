@@ -20,9 +20,11 @@ typedef enum
 	DIO_OK
 }DIO_ErrorStatus;
 
+
+
 #define DIO_PIN_OUTPUT 1
 #define DIO_PIN_INPUT 0
-
+/*PORT*/
 #define DIO_PIN_HIGH 1
 #define DIO_PIN_LOW 0
 
@@ -49,15 +51,15 @@ typedef enum
 
 DIO_ErrorStatus DIO_enumSetPinDirection (u8 Copy_u8PORT, u8 Copy_u8PIN, u8 Copy_u8Direction );
 DIO_ErrorStatus DIO_enumSetPinValue     (u8 Copy_u8PORT, u8 Copy_u8PIN, u8 Copy_u8Value     );
-DIO_ErrorStatus DIO_enumGetPinValue     (u8 Copy_u8PORT, u8 Copy_u8PIN, u8 *Copy_PtrData         );
+DIO_ErrorStatus DIO_enumGetPinValue     (u8 Copy_u8PORT, u8 Copy_u8PIN, u8 *Copy_PtrData    );
 DIO_ErrorStatus DIO_enumTogglePinValue  (u8 Copy_u8PORT, u8 Copy_u8PIN                      );
-
+DIO_ErrorStatus DIO_enumConnectPullUp   (u8 Copy_u8PORT, u8 Copy_u8PIN, u8 Copy_u8Direction );
 
 
 DIO_ErrorStatus DIO_enumSetPortDirection (u8 Copy_u8PORT, u8 Copy_u8Direction      );
 DIO_ErrorStatus DIO_enumSetPortValue     (u8 Copy_u8PORT, u8 Copy_u8Value          );
-DIO_ErrorStatus DIO_enumGetPortValue     (u8 Copy_u8PORT , u8 *Copy_PortPtrData);
-DIO_ErrorStatus DIO_enumTogglePortValue  (u8 Copy_u8PORT                     );
+DIO_ErrorStatus DIO_enumGetPortValue     (u8 Copy_u8PORT , u8 *Copy_PortPtrData    );
+DIO_ErrorStatus DIO_enumTogglePortValue  (u8 Copy_u8PORT                           );
 
 
 

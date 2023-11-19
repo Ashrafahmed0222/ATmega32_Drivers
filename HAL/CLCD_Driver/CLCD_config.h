@@ -35,7 +35,7 @@
 #define CLCD_EN DIO_PIN2
 
 
-#define CLCD_DATA_PORT          DIO_PORTA
+#define CLCD_DATA_PORT     DIO_PORTA
 #define CLCD_CONTROL_PORT  DIO_PORTC
 
 

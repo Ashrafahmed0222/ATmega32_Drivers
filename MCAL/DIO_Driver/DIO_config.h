@@ -17,7 +17,7 @@
 *  Layer:   M_CAL
 *  SWC:     DIO/GPIO
 */
-
+# PORTD 0b10101010
 
 
 #ifndef _DIO_CONFIG_H_
